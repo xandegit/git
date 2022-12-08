@@ -46,3 +46,10 @@ $ git commit -m "Resolved merge conflict by incorporating both suggestions."
 You can now merge the branches on the command line or push your changes to your remote repository on GitHub and merge your changes in a pull request.
 
 
+Git show branch
+
+git show-branch --list --topo-order
+
+git log --graph --pretty=online --abbrev-commit
+
+

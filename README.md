@@ -60,3 +60,5 @@ git status | grep deleted
 #Add only deleted files
 git ls-files --deleted | xargs git add
 
+git ls-files --deleted -- lib/foo | xargs git add
+

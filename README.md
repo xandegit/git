@@ -53,3 +53,10 @@ git show-branch --list --topo-order
 git log --graph --pretty=online --abbrev-commit
 
 
+#Show git status
+
+git status | grep deleted 
+
+#Add only deleted files
+git ls-files --deleted | xargs git add
+

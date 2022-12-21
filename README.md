@@ -62,3 +62,18 @@ git ls-files --deleted | xargs git add
 
 git ls-files --deleted -- lib/foo | xargs git add
 
+Search commits by commit message
+
+git log --all --grep='Build 0051'
+
+To search the actual content of commits through a repo's history, use:
+
+git grep 'Build 0051' $(git rev-list --all)
+
+Finally, as a last resort in case your commit is dangling and not connected to history at all, you can search the reflog itself with the -g flag (short for --walk-reflogs:
+
+git log -g --grep='Build 0051'
+
+Get commit by id
+git cherry-pick <commit>
+

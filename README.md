@@ -77,3 +77,50 @@ git log -g --grep='Build 0051'
 Get commit by id
 git cherry-pick <commit>
 
+Git stash 
+
+View saved stashes
+Where WIP stands for work in progress
+
+git stash list
+
+To provide more context to stash than using just wip id it's possible to add name for stash
+
+git stash save "stash comment"
+
+Add stash using flags
+- -u add also untracked files to stash
+- -a add all files also ignored files
+
+Applying stash
+Popping stash removes it from stashes and applying to working branch
+
+git stash pop 
+git stash pop stash@{2}
+
+Alternatively it's possible reapply the chenges to working branch and keep stash
+
+git stash apply
+git stash apply stash@{2}
+
+To see stash chenges
+
+git stash show
+git stash show stash@{4}
+
+To view the full diff of a stah pass flag -p (--patch)
+
+git stash show -p 
+git stash show -p stash@{2}
+
+Createing a branch from stash
+
+git stash branch branch_name stash@{3}
+
+Cleaning up your stash
+git stash drop stash@{1}
+
+Or delete all of stashes
+
+git stash clear
+

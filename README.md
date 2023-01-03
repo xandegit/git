@@ -123,4 +123,9 @@ git stash drop stash@{1}
 Or delete all of stashes
 
 git stash clear
+ 
+ 
+Restore removed files from previous commits
+
+git checkout <commit>~1 files_pathes
 

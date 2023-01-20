@@ -103,7 +103,7 @@ Alternatively it's possible reapply the chenges to working branch and keep stash
 git stash apply
 git stash apply stash@{2}
 
-To see stash chenges
+To see stash changes
 
 git stash show
 git stash show stash@{4}
@@ -112,6 +112,9 @@ To view the full diff of a stah pass flag -p (--patch)
 
 git stash show -p 
 git stash show -p stash@{2}
+
+Add just staged
+git stash push --staged -m "comment"
 
 Createing a branch from stash
 
@@ -128,4 +131,6 @@ git stash clear
 Restore removed files from previous commits
 
 git checkout <commit>~1 files_pathes
+
+
 
